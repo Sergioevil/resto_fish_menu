@@ -21,32 +21,33 @@
     <style>
         body {
             --bg-color: var(--tg-theme-bg-color, #fff);
-            font-family: sans-serif;
-            background-color: var(--bg-color);
-            color: var(--tg-theme-text-color, #222);
-            font-size: 14px;
-            margin: 0;
-            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            background-color: var(--tg-theme-bg-color);
+            color: var(--tg-theme-text-color);
             color-scheme: var(--tg-color-scheme);
         }
-        body.gray {
-            background-color: var(--tg-theme-secondary-bg-color, #efefef);
+
+
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
         }
 
-        a {
-            color: var(--tg-theme-link-color, #2678b6);
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
         }
-        .btn {
-            font-size: 14px;
-            padding: 10px 17px;
+        
+        img {
+            width: 70px;
+            margin: 30px auto;
         }
-        .btn-primary {
-            background-color: var(--tg-theme-button-color, #50a8eb);
-            color: var(--tg-theme-button-text-color, #fff);
-            border: none;
-        }
-        #main {
-            display: block;
+
+        p {
+            width: 350px;
+            margin: 0 auto;
         }
 
         button {
@@ -64,49 +65,6 @@
         }
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
-        }
-        .main-container {
-            padding: 15px;
-        }
-        .list-header {
-            text-transform: uppercase;
-            font-size: .92em;
-            color: var(--tg-theme-hint-color, #ccc);
-            margin: 0 0 10px;
-        }
-        a.list-group-item,
-        button.list-group-item {
-            color: var(--tg-theme-text-color, #222);
-        }
-        .main-container p {
-            margin: 0 0 10px;
-        }
-        .main-container pre,
-        .main-container > .btn {
-            margin: 0 0 7px;
-        }
-        .main-container pre + .hint,
-        .main-container > .btn + .hint {
-            text-align: center;
-            margin: 0 0 15px;
-        }
-
-        button[disabled] {
-            opacity: 0.6;
-            cursor: auto;
-            pointer-events: none;
-        }
-
-        button.close_btn {
-            /*position: fixed;*/
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 0;
-            margin: 0;
-            padding: 16px 20px;
-            text-transform: uppercase;
         }
 
         input[type="text"],
@@ -166,10 +124,7 @@
         section + section {
             padding: 0 15px 65px;
         }
-        p {
-            width: 350px;
-            margin: 0 auto;
-        }
+        
         ul {
             text-align: left;
         }
@@ -182,9 +137,7 @@
             padding: 7px;
         }
         
-        img {
-            width: 100%;
-        }
+        
         .columns {
             display: flex;
         }
@@ -288,11 +241,13 @@
 <body>
     <div id="main">
         <h1>Меню Resto fish</h1>
-        <div id = "card">
-            <img src="https://i.imgur.com/WaZxrEe.jpg" alt="">
-            <p class="card-text">Красивый диван синий</p>
-            <p class="card-text">$1,399</p>
-            <button id="buy">Купить</button>
+        <div class="cards">
+            <div class = "card">
+                <img src="https://i.imgur.com/WaZxrEe.jpg" alt="">
+                <p class="card-text">Красивый диван синий</p>
+                <p class="card-text">$1,399</p>
+                <button id="buy">Купить</button>
+            </div>
         </div>
     </div>
     <form id="form">
