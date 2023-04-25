@@ -48,15 +48,19 @@
 
         button {
             display: block;
-            width: 100%;
-            font-size: 14px;
-            margin: 15px 0;
+            width: 200px;
+            font-size: 20px;
+            margin-top: 50px;
+            height: 60px;
             padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
+            border: 0;
+            border-radius: 5px;
             background-color: var(--tg-theme-button-color, #50a8eb);
             color: var(--tg-theme-button-text-color, #ffffff);
             cursor: pointer;
+        }
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color);
         }
         .main-container {
             padding: 15px;
@@ -291,22 +295,33 @@
 </head>
 
 <body>
-    <div class='container-fluid'>
-        <div class="card mx-auto col-md-3 col-10 mt-5 pt-4">
-            <div class="d-flex sale ">
-                <div class="btn">SALE</div>
-            </div>
-            <img class='mx-auto img-thumbnail'
-                src="https://i.imgur.com/WaZxrEe.jpg"
-                width="auto" height="auto"/>
-            <div class="card-body text-center mx-auto">
-                <h5 class="card-title">Sofa Chair</h5>
-                <p class="card-text">$1,399</p>
-            </div>
-            <button id="data_btn">В корзину</button>
+    <div id="main">
+        <h1>Меню Resto fish</h1>
+        <div id = "card">
+            <img src="https://i.imgur.com/WaZxrEe.jpg" alt="">
+            <p class="card-text">Красивый диван синий</p>
+            <p class="card-text">$1,399</p>
         </div>
     </div>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Телефон" id="user_phone">
+        <button id=""order>К оформлению</button>
+    </form>
 
-
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.display = "none"
+            tg.initDataUnsafe    
+        })
+        order.addEventListener("click", () =>{
+            tg.close()
+        })
+    </script>
 </body>
 </html>
