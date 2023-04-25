@@ -45,6 +45,9 @@
             color: var(--tg-theme-button-text-color, #fff);
             border: none;
         }
+        #main {
+            display: block;
+        }
 
         button {
             display: block;
@@ -292,7 +295,7 @@
         small {
             font-size: 12px;
         }
-        form {
+        #form {
             display: none;
         }
     </style>
@@ -321,6 +324,7 @@
         let order = document.getElementById("order");
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none"
+            document.getElementById("form").style.display = "block"
             tg.initDataUnsafe    
         })
         order.addEventListener("click", () =>{
